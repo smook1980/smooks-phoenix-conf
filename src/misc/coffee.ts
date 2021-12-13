@@ -37,7 +37,7 @@ function start({ screen, timeout }: Config): TimerStopper {
   };
   const update = updater(timer);
 
-  const updateInterval = setInterval(update, 1000 * 60);
+  const updateInterval = +setInterval(update, 1000 * 60);
   const alertTimeout = setTimeout(
     alerter(timer, updateInterval),
     1000 * 60 * timer.timeout,

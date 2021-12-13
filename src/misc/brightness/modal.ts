@@ -12,7 +12,7 @@ export function showBrightness(value: number) {
   modal.text = `Brightness: ${value}`;
   showCenterOn(modal, Screen.main());
 
-  closeModal = setTimeout(close, 1000);
+  closeModal = +setTimeout(close, 1000);
 }
 
 function close() {
