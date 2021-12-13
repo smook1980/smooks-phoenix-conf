@@ -42,10 +42,10 @@
 	},
 	"homepage": "https://github.com/mafredri/phoenix-config#readme",
 	"prettier": {
-		"tabWidth": 4,
-		"useTabs": true,
+		"tabWidth": 2,
+		"useTabs": false,
 		"singleQuote": true,
-		"bracketSpacing": false,
+		"bracketSpacing": true,
 		"trailingComma": "all"
 	}
 }

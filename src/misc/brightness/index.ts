@@ -1,1 +1,1 @@
-export {brightness} from './display';
+export { brightness } from './display';
