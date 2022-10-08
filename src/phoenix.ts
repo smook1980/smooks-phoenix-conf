@@ -16,7 +16,7 @@ const scanner = new Scanner();
 let coffee: TimerStopper | null;
 
 Phoenix.set({
-  daemon: true,
+  daemon: false,
   openAtLogin: true,
 });
 
@@ -253,13 +253,13 @@ onKey('return', hyperShift, () => {
   });
 });
 
-onKey('§', [], (_, repeated) => {
+onKey('space', ['option'], (_, repeated) => {
   if (repeated) {
     return;
   }
   terminal.toggle();
 });
-onKey('§', ['cmd'], (_, repeated) => {
+ onKey('§', ['cmd'], (_, repeated) => {
   if (repeated) {
     return;
   }

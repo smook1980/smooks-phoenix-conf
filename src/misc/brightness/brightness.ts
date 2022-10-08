@@ -1,4 +1,3 @@
-import osascript from '../../misc/osascript';
 import task from '../../task';
 
 // https://github.com/nriley/brightness
@@ -7,8 +6,9 @@ const brightnessBinary = '/usr/local/bin/brightness';
 /**
  * brightness runs the brightness command with provided arguments.
  */
-export function brightness(...args: string[]): Promise<string> {
-  return task(brightnessBinary, ...args).then((t) => t.output);
+export async function brightness(...args: string[]): Promise<string> {
+  const t = await task(brightnessBinary, ...args);
+    return t.output;
 }
 
 function setBrightness(value: number) {

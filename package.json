@@ -4,7 +4,7 @@
 	"description": "Configuration for kasper/phoenix written in TypeScript",
 	"main": "src/phoenix.ts",
 	"dependencies": {
-		"@types/phoenix": "github:mafredri/phoenix-typings#master",
+		"@types/phoenix": "github:mafredri/phoenix-typings#main",
 		"rxjs": "^7.3.0",
 		"typescript": "^4.4.3"
 	},
@@ -19,17 +19,17 @@
 		"webpack-merge": "^5.8.0"
 	},
 	"scripts": {
-		"start": "yarn run watch",
-		"watch": "webpack --watch --config webpack.prod.js",
-		"watch-dev": "webpack --watch --config webpack.dev.js",
-		"build": "webpack --config webpack.prod.js",
+		"start": "webpack --watch --config webpack.prod.js",
+		"start-dev": "webpack --watch --config webpack.dev.js",
+		"build": "webpack --config webpack.prod.js && git tag (date -Iminutes)",
 		"lint": "tslint src/**/*.ts",
 		"format": "prettier --write \"src/**/*.ts\"",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"install": "( echo '// Generated from ~/src/smooks-phoenix-conf (yarn build; yarn install)'; cat out/phoenix.js ) > ~/.phoenix.js"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/mafredri/phoenix-config.git"
+		"url": "git+https://github.com/smook1980/phoenix-config.git"
 	},
 	"keywords": [
 		"phoenix",

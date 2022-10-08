@@ -1,4 +1,3 @@
-import task from '../task';
 import osascript from './osascript';
 
 enum AlfredTheme {
@@ -27,23 +26,23 @@ export async function disable() {
 
 export async function isDarkMode(): Promise<boolean> {
   const output = await osascript(`
-		tell application "System Events"
-			tell appearance preferences
-				get dark mode as boolean
-			end tell
-		end tell
-	`);
+    tell application "System Events"
+      tell appearance preferences
+        get dark mode as boolean
+      end tell
+    end tell
+  `);
   return output.trim().toLowerCase() === 'true';
 }
 
 function setDarkMode(enabled: boolean) {
   return osascript(`
-		tell application "System Events"
-			tell appearance preferences
-				set dark mode to ${enabled}
-			end tell
-		end tell
-	`);
+    tell application "System Events"
+      tell appearance preferences
+        set dark mode to ${enabled}
+      end tell
+    end tell
+  `);
 }
 
 function setAlfredTheme(theme: AlfredTheme) {
