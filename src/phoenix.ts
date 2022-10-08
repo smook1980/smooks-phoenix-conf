@@ -259,7 +259,7 @@ onKey('space', ['option'], (_, repeated) => {
   }
   terminal.toggle();
 });
- onKey('§', ['cmd'], (_, repeated) => {
+onKey('§', ['cmd'], (_, repeated) => {
   if (repeated) {
     return;
   }

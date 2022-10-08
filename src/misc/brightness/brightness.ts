@@ -8,7 +8,7 @@ const brightnessBinary = '/usr/local/bin/brightness';
  */
 export async function brightness(...args: string[]): Promise<string> {
   const t = await task(brightnessBinary, ...args);
-    return t.output;
+  return t.output;
 }
 
 function setBrightness(value: number) {
