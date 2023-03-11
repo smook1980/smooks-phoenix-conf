@@ -21,7 +21,7 @@
 	"scripts": {
 		"start": "webpack --watch --config webpack.prod.js",
 		"start-dev": "webpack --watch --config webpack.dev.js",
-		"build": "webpack --config webpack.prod.js && git tag (date -Iminutes)",
+		"build": "webpack --config webpack.prod.js && git tag $(date -Iminutes)",
 		"lint": "tslint src/**/*.ts",
 		"format": "prettier --write \"src/**/*.ts\"",
 		"test": "echo \"Error: no test specified\" && exit 1",
