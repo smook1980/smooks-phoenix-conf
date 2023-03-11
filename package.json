@@ -21,11 +21,11 @@
 	"scripts": {
 		"start": "webpack --watch --config webpack.prod.js",
 		"start-dev": "webpack --watch --config webpack.dev.js",
-		"build": "webpack --config webpack.prod.js && git tag $(date -Iminutes)",
+		"build": "webpack --config webpack.prod.js",
 		"lint": "tslint src/**/*.ts",
 		"format": "prettier --write \"src/**/*.ts\"",
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"install": "( echo '// Generated from ~/src/smooks-phoenix-conf (yarn build; yarn install)'; cat out/phoenix.js ) > ~/.phoenix.js"
+		"install": "echo '// Generated from ~/src/smooks-phoenix-conf (yarn build; yarn install)' > ~/.phoenix.js; cat out/phoenix.js >> ~/.phoenix.js"
 	},
 	"repository": {
 		"type": "git",
